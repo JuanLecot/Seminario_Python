@@ -1,12 +1,14 @@
 # Caja Registradora: Ingreso Precios de a uno y Calculo Total
 
-total= float(0)
-precio = float (input("Ingrese el precio del producto: $"))
-while precio != 0:
-    if (precio == 0):
+total_caja = float(0)
+
+#Bucle INFINITO
+while True:
+    precio = float (input("Ingrese el precio del Producto: $"))
+
+    if (precio == 0): #CORTE 
         break
-    total+= precio
-    precio = float(input("Ingrese precio de otro producto (0 para finalizar): $"))
 
-print (f"Precio Total ${total:2}")
+    total_caja += precio
 
+print(f"El total de la es de ${total_caja:2}")
