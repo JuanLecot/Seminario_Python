@@ -31,7 +31,7 @@ while attempts > 0:
     if "_" not in progress:
         print("¡Ganaste!")
         break
-    
+
     print(f"Intentos restantes: {attempts}")
     print(f"Letras usadas: {', '.join(guessed)}")
 
@@ -40,10 +40,14 @@ while attempts > 0:
     if letter in guessed:
         print("Ya usaste esa letra.")
     elif letter in word:
-
         guessed.append(letter)
         print("¡Bien! Esa letra está en la palabra.")
-    else:
+    
+    # Caso Invalido: Caracter Especial, Numero o Palabra
+    elif (letter < "a" or letter > "z") or (len(letter) > 1):
+        print ("Entrada No Valida.")
+
+    else: 
         guessed.append(letter)
         attempts -= 1
         print("Esa letra no está en la palabra.")
