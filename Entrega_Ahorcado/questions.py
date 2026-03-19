@@ -31,7 +31,7 @@ while attempts > 0:
     # Verificar si el jugador ya adivinó la palabra completa
     if "_" not in progress:
         print("¡Ganaste!")
-        puntaje += 6
+        puntaje += 6 #Puntaje x Ganar
         break
 
     print(f"Intentos restantes: {attempts}")
@@ -53,11 +53,11 @@ while attempts > 0:
         guessed.append(letter)
         attempts -= 1
         print("Esa letra no está en la palabra.")
-        puntaje -= 1
+        puntaje -= 1 
 
     print()
 else:
     print(f"¡Perdiste! La palabra era: {word}")
-    puntaje = 0
+    puntaje = 0 # Puntaje x Perder
 
 print(f"El Puntaje es {puntaje}")
