@@ -1,4 +1,4 @@
-  #Juego del Ahorcado
+  # Juego del Ahorcado
   - Lecot Juan Pedro 24313/7
 ---
   **funcionalidades**:
