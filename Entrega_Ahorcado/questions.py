@@ -1,22 +1,46 @@
 import random
-words = [
-    "python",
-    "programa",
-    "variable",
-    "funcion",
-    "bucle",
-    "cadena",
-    "entero",
-    "lista",
-]
 
-word = random.choice(words)
+#Diccionario 
+categorias_ahorcado = {
+    "Lenguajes de programacion": [
+        "python", "java", "pascal", "javascript", "ruby", "c++"
+    ],
+    "Fundamentos de programacion": [
+        "programa", "variable", "funcion", "bucle", "algoritmo", "sintaxis", "compilador"
+    ],
+    "Tipos y estructuras de datos": [
+        "cadena", "entero", "lista", "booleano", "flotante", "diccionario", "tupla"
+    ],
+    "Algoritmos avanzados": [
+        "dijkstra", "recursividad", "grafos", "busqueda", "ordenamiento"
+    ],
+    "Desarrollo de software": [
+        "framework", "libreria", "repositorio", "interfaz", "depuracion", "api"
+    ],
+    "Arquitectura de computadoras": [
+        "motherboard", "procesador", "registros", "cache", "transistores", "perifericos"
+    ],
+    "Ramas de la matemática": [
+        "algebra", "calculo", "estadistica", "geometria", "aritmetica"
+    ]
+}
+
 guessed = []
 attempts = 6
 puntaje = int(0)
 
 print("¡Bienvenido al Ahorcado!")
 print()
+
+print()
+print ("--- MENU ---")
+print("+ Seleccione una de las siguientes categorias: ")
+
+for categoria in categorias_ahorcado:
+    print (f"- {categoria}")
+categoria_seleccionada = input("Ingrese la categoria: ")
+
+word = random.choice(categorias_ahorcado[categoria_seleccionada])
 
 while attempts > 0:
     # Mostrar progreso: letras adivinadas y guiones para las que faltan
