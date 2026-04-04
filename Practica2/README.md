@@ -13,8 +13,8 @@ Colección de 10 ejercicios prácticos diseñados para aprender a utilizar **mó
 ### 1. Clonar o descargar el repositorio
  
 ```bash
-git clone <url-del-repositorio>
-cd ejercicios-python-modulos
+git clone <https://github.com/JuanLecot/Seminario_Python/tree/main/Practica2>
+cd Seminario_Python/Practica2
 ```
  
 ### 2. (Opcional) Crear un entorno virtual
